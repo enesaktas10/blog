@@ -127,8 +127,10 @@ body {
 
 .skill {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-wrap: wrap;
+    /* Elemanların ekranı aştığında yeni satıra geçmesini sağlar */
+    gap: 10px;
+    /* Elemanlar arasında boşluk bırakır */
 }
 
 .skill p {
@@ -139,8 +141,12 @@ body {
     transition: .5s;
 }
 
-.skillP {
-    margin-left: 15px;
+.skill p {
+    flex: 1 1 auto;
+    /* Elemanların genişliklerinin otomatik ayarlanmasını sağlar */
+    min-width: 150px;
+    /* Minimum genişliği belirleyerek çok dar olmalarını engeller */
+    margin: 5px;
 }
 
 .skill p:hover {
